@@ -1,0 +1,6 @@
+# Ignore system files (MacOS specific)
+.DS_Store
+
+# Ignore IDE configurations (VSCode example)
+.vscode/
+
