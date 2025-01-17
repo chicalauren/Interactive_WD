@@ -121,3 +121,9 @@ code {
     word-wrap: break-word;
 }
 
+
+  
+  .css-example p:hover {
+    color: red;          /* Change text color to red */
+    background-color: green; /* Change background color to blue */
+  }
