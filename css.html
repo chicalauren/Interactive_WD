@@ -43,17 +43,7 @@
         background-color:orchid
     }
     
-    footer{
-        text-align: center;
-        font-size: 15px;
-        margin-top: 50px;
-        background-color: lightgrey;
-        color: #2c3e50;
-        padding: 10px;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+   
 
     a:hover{
         color: #2c3e50;
@@ -75,6 +65,19 @@
     
     }
 
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+        background-color: lightblue;
+    }
+    .flex-item {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+
     </style>
 </head>
 <body>
@@ -82,6 +85,7 @@
     <header>
         <h1>Welcome To CSS Basics</h1>
     </header>
+
 
     <div class="container">
         <aside class="sidebar">
@@ -112,11 +116,34 @@
             <p>This is a paragraph with basic styling. The font size, line height, and margin have been adjusted for readability.</p>
             <a href="https://www.w3schools.com/css/" target="_blank" class="button">Learn CSS</a>
             </section>
+            <section>
+                <h2>CSS Flexbox</h2>
+                <p>CSS Flexbox is a layout module that makes it easier to design flexible and responsive layout structures without using float or positioning.</p>
+                <div class="flex-container">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <pre>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            justify-content: space-around;
+                            background-color: lightblue;
+                        }
+                        .flex-item {
+                            background-color: #2c3e50;
+                            color: white;
+                            padding: 20px;
+                            margin: 10px;
+                            text-align: center;
+                        }
+                    </code>
+                </pre>
+            </section>
             <!-- You can add more content related to CSS Basics here -->
         </main>
     </div>
-    <footer>
-        <p><strong>Interactive Web Development</strong> CSS Basics Example</p>
-    </footer>
+  
 </body>
 </html>

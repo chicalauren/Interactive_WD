@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/style.css">
 
     <title>JavaScript Basics</title>
+   
 </head>
 <body>
     <div class="container">
@@ -46,8 +47,32 @@
             </li>
             </ul>
              </p>
+            <section>
+                <h2>JavaScript Functions</h2>
+                <p>Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.</p>
+                <pre>
+                    <code>
+                        function greet(name) {
+                            return 'Hello, ' + name + '!';
+                        }
+                        console.log(greet('World')); // Output: Hello, World!
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>Event Handling</h2>
+                <p>JavaScript can be used to handle events, such as when a user clicks a button. Here's an example:</p>
+                <button id="alertBtn" class="button">Click me</button>
+                <p id="message"></p>
+                <script>
+                    document.getElementById('alertBtn').addEventListener('click', function() {
+                        document.getElementById('message').textContent = 'Button was clicked!';
+                    });
+                </script>
+            </section>
         </main>
     </div>
     <script src="./assets/script.js"></script>
+   
 </body>
 </html>
