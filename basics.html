@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
     <title>HTML Basics</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <div class="container">
@@ -18,10 +18,49 @@
         </aside>
         <main class="content">
             <h1>HTML Basics</h1>
-            <p>This section explains the basic concepts of HTML.</p>
-            <!-- You can add more content related to HTML Basics here -->
+            
+            <section>
+                <h2>What is HTML?</h2>
+                <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using various elements and tags.</p>
+            </section>
+
+            <section>
+                <h2>Basic HTML Structure</h2>
+                <p>Every HTML document should contain these basic elements:</p>
+                <ul>
+                    <li><strong>&lt;!DOCTYPE html&gt;</strong> - Declares the document type</li>
+                    <li><strong>&lt;html&gt;</strong> - The root element</li>
+                    <li><strong>&lt;head&gt;</strong> - Contains meta information</li>
+                    <li><strong>&lt;body&gt;</strong> - Contains the visible content</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Common HTML Elements</h2>
+                <ul>
+                    <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> - Headings</li>
+                    <li><strong>&lt;p&gt;</strong> - Paragraphs</li>
+                    <li><strong>&lt;div&gt;</strong> - Divisions or sections</li>
+                    <li><strong>&lt;a&gt;</strong> - Links</li>
+                    <li><strong>&lt;img&gt;</strong> - Images</li>
+                </ul>
+            </section>
+
+            <section class="input-section">
+                <h2>Try It Yourself!</h2>
+                <p>Add your own heading and paragraph to the page:</p>
+                
+                <input type="text" id="headingInput" class="input-field" placeholder="Enter heading text">
+                <input type="text" id="paragraphInput" class="input-field" placeholder="Enter paragraph text">
+                <input type="color" id="headingColor" class="input-field" title="Choose heading color">
+<input type="color" id="paragraphColor" class="input-field" title="Choose paragraph color">
+                <button onclick="addContent()" class="btn">Add Content</button>
+                
+                <div id="dynamic-content"></div>
+            </section>
         </main>
     </div>
+
     <script src="./assets/script.js"></script>
 </body>
 </html>
