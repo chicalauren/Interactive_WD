@@ -28,18 +28,19 @@ body {
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 50px; /* Increased space between links */
 }
 
 .sidebar ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
 }
 
 .sidebar ul li a:hover {
     color: #3498db;
+    transform: scale(1.1); /* Grow effect */
 }
 
 /* Main content area */
@@ -121,3 +122,8 @@ code {
     word-wrap: break-word;
 }
 
+/* Hover effect for paragraph inside .css-example */
+.css-example p:hover {
+    color: red;          /* Change text color to red */
+    background-color: green; /* Change background color to green */
+}
