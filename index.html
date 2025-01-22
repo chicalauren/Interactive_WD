@@ -3,63 +3,60 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./assets/style.css">
-
     <title>Interactive Web Development Intro</title>
   </head>
   <body>
     <div class="container">
       <aside class="sidebar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="basics.html">HTML Basics</a></li>
-            <li><a href="css.html">CSS Basics</a></li>
-            <li><a href="script.html">JavaScript Basics</a></li>
-          </ul>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="basics.html">HTML Basics</a></li>
+          <li><a href="css.html">CSS Basics</a></li>
+          <li><a href="script.html">JavaScript Basics</a></li>
+        </ul>
       </aside>
       <main class="content">
-          <h1>Interactive Website Design</h1>
-          <p>
-              Welcome! This website will help explain some basic components of web design!
-          <h2 id="html">HTML Basics</h2>
-          <p>
-              The first thing you need to know about HTML are tags and elements. HTML tags are keywords wrapped in what we call opening and closing brackets, otherwise known as a less than or greater than keys on the keyboard &lt; &gt;. Inside these brackets are the keywords that tell us what that tag is going to do to our webpage.
-          </p>
-          <h2 id="css">CSS Basics</h2>
-          <p>
-              CSS stands for Cascading Style Sheets, and it's used to style and layout HTML elements on the page. For example, CSS allows you to change the color of a text, add borders, and control spacing and positioning. Let’s see an example:
-          </p>
-          <div class="css-example">
-            <!-- Insert hover function here -->
-              <p>This is a text that will change color when hovered over.</p>
-          </div>
-          <h2 id="javascript">JavaScript Basics</h2>
-          <p>
-              JavaScript is a scripting language that allows us to add interactivity to our websites. With JavaScript, you can create dynamic features like counters, animations, and event handling. Here's an interactive button example:
-          </p>
-          <!-- insert counter function here -->
-          <button id="counterBtn">Click me! (Counter: <span id="counter">0</span>)</button>
-          <p>In the code below, we're using a simple function to count the number of times the button is clicked:</p>
-          <pre>
-              <code>
-                <!-- take the below to make your JavaScript function -->
-                  &lt;button id="counterBtn"&gt;Click me!&lt;/button&gt;
-                  &lt;script&gt;
-                  let counter = 0;
-                  document.getElementById('counterBtn').addEventListener('click', () =&gt; {
-                      counter++;
-                      document.getElementById('counter').textContent = counter;
-                  });
-                  &lt;/script&gt;
-              </code>
-          </pre>
+        <h1>Interactive Website Design</h1>
+        <p>
+          Welcome! This website will help explain some basic components of web design!
+        </p>
+
+        <h2 id="html">HTML Basics</h2>
+        <p>
+          The first thing you need to know about HTML are tags and elements. HTML tags are keywords wrapped in what we call opening and closing brackets, otherwise known as a less than or greater than keys on the keyboard &lt; &gt;. Inside these brackets are the keywords that tell us what that tag is going to do to our webpage.
+        </p>
+
+        <h2 id="css">CSS Basics</h2>
+        <p>
+          CSS stands for Cascading Style Sheets, and it's used to style and layout HTML elements on the page. For example, CSS allows you to change the color of a text, add borders, and control spacing and positioning. Let's see an example:
+        </p>
+        <div class="css-example">
+          <p>This is a text that will change color when hovered over.</p>
+        </div>
+
+        <h2 id="javascript">JavaScript Basics</h2>
+        <p>
+          JavaScript is a scripting language that allows us to add interactivity to our websites. With JavaScript, you can create dynamic features like counters, animations, and event handling. Here's an interactive button example:
+        </p>
+        
+        <button id="counterBtn" role="button" aria-label="Click to increase counter">
+          Click me! (Counter: <span id="counter">0</span>)
+        </button>
+
+        <p>In the code below, we're using a simple function to count the number of times the button is clicked:</p>
+        <pre>
+          <code>
+            let counter = 0;
+            document.getElementById('counterBtn').addEventListener('click', () => {
+                counter++;
+                document.getElementById('counter').textContent = counter;
+            });
+          </code>
+        </pre>
       </main>
-  </div>
-  <script src="./assets/script.js"></script>    <h1></h1>
-    <p></p>
+    </div>
+
+    <script src="./assets/script.js"></script>
   </body>
 </html>
-
-
-
