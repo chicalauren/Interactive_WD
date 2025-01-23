@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/style.css">
 
     <title>JavaScript Basics</title>
+   
 </head>
 <body>
     <div class="container">
@@ -23,25 +24,25 @@
             <!-- You can add more content related to JavaScript Basics here -->
              <p>JavaScript has 7 basic data types
             <ul>
-                <li id="string"><h2>string</h2>
+                <li id="string"><h2><button>String</button></h2>
                     <p>A string is a sequence of characters, like this sentence.</p>
                 </li>
-                <li id="number"><h2>number</h2>
-                <p>A number can be an integer like 42 or a decimal like 3.14.</p>
+                <li id="number"><h2><button>Number</button></h2>
+                <div>A number can be an integer like 42 or a decimal like 3.14.</div>
             </li>
-                <li id="boolean"><h2>boolean</h2></li>
-                <p>A boolean is either true or false.</p>
+                <li id="boolean"><h2><button>Boolean</button></h2></li>
+                <div>A boolean is either true or false.</div>
             </li>
-                <li id="bigint"><h2>bigint</h2></li>
+                <li id="bigint"><h2><button>Number</button></h2></li>
                 <p>A bigint represents very large numbers, like 9007199254740991n</p>
             </li>
-                <li id="symbol"><h2>symbol</h2></li>
+                <li id="symbol"><h2><button>Symbol</button></h2></li>
                 <p>A symbol is a unique and immutable identifier: Symbol('example')</p>
             </li>
-                <li id="null"><h2>null</h2></li>
+                <li id="null"><h2><button>Null</button></h2></li>
                 <p>Null represents the intentional absence of any object value.</p>
             </li>
-                <li id="undefined"><h2>undefined</h2></li>
+                <li id="undefined"><h2><button>Undefined</button></h2></li>
                 <p>Undefined means a variable has been declared but not assigned a value.</p>
             </li>
             </ul>
@@ -55,8 +56,32 @@
                    structures. JavaScript is dynamically typed, meaning that the data type of a variable is determined
                     at runtime and can change as the program 
                 executes, providing flexibility but also necessitating careful management of types to prevent errors.</p>
+            <section>
+                <h2>JavaScript Functions</h2>
+                <p>Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.</p>
+                <pre>
+                    <code>
+                        function greet(name) {
+                            return 'Hello, ' + name + '!';
+                        }
+                        console.log(greet('World')); // Output: Hello, World!
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>Event Handling</h2>
+                <p>JavaScript can be used to handle events, such as when a user clicks a button. Here's an example:</p>
+                <button id="alertBtn" class="button">Click me</button>
+                <p id="message"></p>
+                <script>
+                    document.getElementById('alertBtn').addEventListener('click', function() {
+                        document.getElementById('message').textContent = 'Button was clicked!';
+                    });
+                </script>
+            </section>
         </main>
     </div>
     <script src="./assets/script.js"></script>
+   
 </body>
 </html>

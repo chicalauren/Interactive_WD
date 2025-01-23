@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Interactive Web Development Intro</title>
+    
   </head>
   <body>
     <div class="container">
@@ -70,6 +71,25 @@
             });
           </code>
         </pre>
+
+        <h2 id="form">Form Example</h2>
+        <p>Forms are used to collect user input. Here's a simple form with JavaScript validation:</p>
+        <form id="exampleForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit" class="button">Submit</button>
+            <p id="formMessage"></p>
+        </form>
+        <script>
+            document.getElementById('exampleForm').addEventListener('submit', function(event) {
+              event.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                document.getElementById('formMessage').textContent = 'Form submitted!';
+            });
+        </script>
       </main>
     </div>
 
