@@ -176,3 +176,37 @@ code {
         margin-bottom: 20px;
     }
 }
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0; /* Lighter text color for better contrast */
+}
+
+body.dark-mode button {
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode .sidebar {
+    background-color: #333;
+}
+
+body.dark-mode .content {
+    background-color: #222;
+    color: #e0e0e0; /* Ensure text in content section is readable */
+}
+
+body.dark-mode a {
+    color: #4CAF50; /* Use a light green color for links in dark mode */
+}
+
+body.dark-mode a:hover {
+    color: #81C784; /* Lighter green on hover */
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffffff; /* White headings for better readability */
+}
+
+body.dark-mode p, body.dark-mode li {
+    color: #e0e0e0; /* Ensure paragraphs and list items are visible */
+}
