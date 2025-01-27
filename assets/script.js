@@ -68,3 +68,30 @@ const paragraphColor = document.getElementById('paragraphColor').value;
       document.getElementById('paragraphInput').value = '';
   }
 }
+
+
+
+// Get the theme toggle button
+const modeToggle = document.getElementById('mode-toggle');
+
+// Function to switch between light and dark mode
+modeToggle.addEventListener('click', () => {
+    // Toggle a class on the body element to switch themes
+    document.body.classList.toggle('dark-mode');
+
+    // Save the user's theme preference in localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+
+// Check the saved theme preference from localStorage and apply it
+window.addEventListener('load', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+});
