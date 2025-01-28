@@ -3,63 +3,166 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./assets/style.css">
-
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="./assets/style.css">
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
     <title>Interactive Web Development Intro</title>
+    
   </head>
+
+
   <body>
-    <div class="container">
-      <aside class="sidebar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="basics.html">HTML Basics</a></li>
-            <li><a href="css.html">CSS Basics</a></li>
-            <li><a href="script.html">JavaScript Basics</a></li>
-          </ul>
+    <div class="container-fluid">
+      <div class="row">
+      <aside class="sidebar col-md-3 p-4" style="font-size: 4.5rem;">
+        <ul class = "list-unstyled">
+          <li><a href="index.html" class="btn btn-link">Home</a></li>
+          <li><a href="basics.html" class="btn btn-link">HTML Basics</a></li>
+          <li><a href="css.html" class="btn btn-link">CSS Basics</a></li>
+          <li><a href="script.html" class="btn btn-link">JavaScript Basics</a></li>
+        </ul>
       </aside>
-      <main class="content">
-          <h1>Interactive Website Design</h1>
+
+
+      <main class="content col-md-9">
+        <h1 class="bg-primary text-white">Understanding How Interactive Websites Work</h1>
+        <p>
+          Welcome! This page will help explain how CSS, JavaScript, and HTML all
+          work together to make modern websites beautiful and interactive! As you read below and on other pages on this site, 
+          you will see examples of how and why websites work the way they do. This is by no means an exhaustive look at 
+          website interactivity, but it will give you a basic understanding to work with. 
+        </p>
+
+        <button id="mode-toggle" class="mb-4">Theme Selector</button>
+      
+
+        <div id="html" class="content-block">
+          <h2 id="html" class="mt-4">HTML Basics</h2>
+          <p>When learning about website interactivity, the first thing you need to understand is HTML. Think of HTML as the foundation of a house—it provides the structure for a webpage. HTML is written using tags and elements, which are keywords enclosed in angle brackets (&lt; &gt;).</p>
+      
+          <p>For example, one commonly used tag is the paragraph tag, written as <code style="color: black; font-weight: bold;">&lt;p&gt;</code>. Any text placed between these tags will be displayed as a paragraph on the webpage. Without wrapping the text in the opening and closing <code style="color: black; font-weight: bold;">&lt;p&gt;</code> tags, the content wouldn't appear correctly.</p>
+      
+          <p>If a developer were to write <code style="color: black; font-weight: bold;">&lt;p&gt;Hello World!&lt;/p&gt;</code>, it will render as a paragraph, like this:</p>
+         
+          <section>
+
+            <hr>
+            <p>Hello World!</p>
+            <hr>
+          </section>
+          
+
+          <p>To dive deeper into HTML and see more examples, check out the "HTML Basics" link in the sidebar!</p>
+        </div>  
+
+        <div id="css" class="content-block">
+          <h2 id="css" class="mt-4">CSS Basics</h2>
           <p>
-              Welcome! This website will help explain some basic components of web design!
-          <h2 id="html">HTML Basics</h2>
-          <p>
-              The first thing you need to know about HTML are tags and elements. HTML tags are keywords wrapped in what we call opening and closing brackets, otherwise known as a less than or greater than keys on the keyboard &lt; &gt;. Inside these brackets are the keywords that tell us what that tag is going to do to our webpage.
+            CSS stands for Cascading Style Sheets, and it's used to style and layout HTML elements on the page. For example, CSS allows you to change the color of a text, add borders, and control spacing and positioning. Let's see an example:
           </p>
-          <h2 id="css">CSS Basics</h2>
-          <p>
-              CSS stands for Cascading Style Sheets, and it's used to style and layout HTML elements on the page. For example, CSS allows you to change the color of a text, add borders, and control spacing and positioning. Let’s see an example:
-          </p>
-          <div class="css-example">
-            <!-- Insert hover function here -->
-              <p>This is a text that will change color when hovered over.</p>
+          <div class="css-example p-3 mb-4 bg-dark">
+            <p>This is a text that will change color when hovered over.</p>
           </div>
-          <h2 id="javascript">JavaScript Basics</h2>
-          <p>
+        </div> 
+
+
+        <div id="javascript" class="content-block">
+            <h2 id="javascript" class="mt-4">JavaScript Basics</h2>
+            <p>
               JavaScript is a scripting language that allows us to add interactivity to our websites. With JavaScript, you can create dynamic features like counters, animations, and event handling. Here's an interactive button example:
-          </p>
-          <!-- insert counter function here -->
-          <button id="counterBtn">Click me! (Counter: <span id="counter">0</span>)</button>
-          <p>In the code below, we're using a simple function to count the number of times the button is clicked:</p>
-          <pre>
+            </p>
+            
+            <button id="counterBtn" class="btn btn-primary" role="button" aria-label="Click to increase counter">
+              Click me! (Counter: <span id="counter">0</span>)
+            </button>
+
+            <p>In the code below, we're using a simple function to count the number of times the button is clicked:</p>
+            <pre class="bg-dark text-white p-3">
               <code>
-                <!-- take the below to make your JavaScript function -->
-                  &lt;button id="counterBtn"&gt;Click me!&lt;/button&gt;
-                  &lt;script&gt;
-                  let counter = 0;
-                  document.getElementById('counterBtn').addEventListener('click', () =&gt; {
-                      counter++;
-                      document.getElementById('counter').textContent = counter;
-                  });
-                  &lt;/script&gt;
+                let counter = 0;
+                document.getElementById('counterBtn').addEventListener('click', () => {
+                    counter++;
+                    document.getElementById('counter').textContent = counter;
+                });
               </code>
-          </pre>
+            </pre>
+        </div>
+        
+        <div id="form" class="content-block">
+            <h2 id="form" class="mt-4">Form Example</h2>
+            <p>Forms are used to collect user input. Here's a simple form with JavaScript validation:</p>
+
+            <form id="exampleForm" class="bg-light p-4 rounded needs-validation" novalidate>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+                <div class="invalid-feedback">Please provide your name.</div>
+              </div>
+              <div class="form-group"> 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+                <div class="invalid-feedback">Please provide a valid email address.</div>
+              </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <p id="formMessage" class="mt-3"></p>
+            </form>
+
+            <!-- Modal for Success Message -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="successModalLabel">Form Submission Successful</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Your form has been successfully submitted!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <script>
+          // Bootstrap's validation will work on submit, no need for custom JS here
+          // Bootstrap validation triggers when you submit the form
+          (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+              var forms = document.getElementsByClassName('needs-validation');
+              Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+
+                  // Check if the form is valid
+                  if (form.checkValidity() === false) {
+                      event.preventDefault(); // Prevent submission if invalid
+                      event.stopPropagation();
+                    } else {
+                      // If form is valid, show the success modal
+                      event.preventDefault(); // Prevent default form submission (so page doesn't reload)
+                      $('#successModal').modal('show'); // Show the Bootstrap modal
+                    }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+        </script>
       </main>
+    </div>
   </div>
-  <script src="./assets/script.js"></script>    <h1></h1>
-    <p></p>
+
+    <script src="./assets/script.js"></script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
-
-
-
