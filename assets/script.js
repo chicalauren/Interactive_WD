@@ -13,7 +13,7 @@ counterBtn.addEventListener('click', function() {
     counterDisplay.textContent = counter;
 });
 
-// JavaScript for sidebar functionality
+// datatypes buttons
 const dataTypes = {
     string: document.getElementById("string"),
     number: document.getElementById("number"),
@@ -86,7 +86,6 @@ modeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-
 
 // Check the saved theme preference from localStorage and apply it
 window.addEventListener('load', () => {
