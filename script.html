@@ -75,6 +75,15 @@
                     <p>JavaScript can be used to handle events, such as when a user clicks a button. Here's an example:</p>
                     <button id="alertBtn" class="btn btn-primary">Click me</button>
                     <p id="message" class="mt-2"></p>
+                    <section>
+                        <dialog open>
+                            <p>This is a modal box using <code>&lt;dialog&gt;</code>!</p>
+                            <form method="dialog">
+                              <button>OK</button>
+                            </form>
+                          </dialog>
+                          
+                    </section>
                     <script>
                         document.getElementById('alertBtn').addEventListener('click', function() {
                             document.getElementById('message').textContent = 'Button was clicked!';
