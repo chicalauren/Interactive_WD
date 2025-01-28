@@ -1,7 +1,7 @@
 # Understanding How Interactive Websites Work
 
 ## Description
-"For Beginners, By Beginners" is an interactive tutorial designed to introduce absolute beginners to the foundational concepts of building interactive websites. Our platform provides a clear, concise, and beginner-friendly approach, helping users understand how websites work without feeling overwhelmed by technical jargon or excessive details.
+This website understanding how interactive websites work - "For Beginners, By Beginners" is an interactive tutorial designed to introduce absolute beginners to the foundational concepts of building interactive websites. Our platform provides a clear, concise, and beginner-friendly approach, helping users understand how websites work without feeling overwhelmed by technical jargon or excessive details.
 
 ---
 
