@@ -3,95 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/js.css">
 
     <title>JavaScript Basics</title>
-   
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">HTML Basics</a></li>
-                <li><a href="css.html">CSS Basics</a></li>
-                <li><a href="script.html">JavaScript Basics</a></li>
-            </ul>
-        </aside>
-        <main class="content">
-            <h1>JavaScript Basics</h1>
-            <p>This section explains the basic concepts of JavaScript.</p>
-            <!-- You can add more content related to JavaScript Basics here -->
-             <p>JavaScript is the core computer programming language that websites use to
-                 create an interactive experience. It works alongside HTML to structure content and
-                  CSS to style it, allowing developers to make web pages  respond to user actions 
-                  like clicks, scrolling, and typing. JavaScript uses basic programming concepts like
-                   conditions, loops, and functions to control the flow of a webpage. Functions group
-                    reusable blocks of code. Some examples of the syntax is as follows: statements
-                     end with semicolons, and code blocks are wrapped in curly braces ({}). Variables
-                      are declared with let, and operators like + or === are used to perform actions and comparisons. 
-                  These basic elements form the foundation of JavaScript’s functionality.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar Section -->
+            <aside class=" sidebar col-md-3 p-4" style="font-size: 4.5rem;">
+                <ul class = "list-unstyled">
+                  <li><a href="index.html" class="btn btn-link">Home</a></li>
+                  <li><a href="basics.html" class="btn btn-link">HTML Basics</a></li>
+                  <li><a href="css.html" class="btn btn-link">CSS Basics</a></li>
+                  <li><a href="script.html" class="btn btn-link">JavaScript Basics</a></li>
+                </ul>
+              </aside>
 
-<P>There are two main categories of data types in JavaScript: primitive and non-primitive 
-    (or reference). Non-primitive types, such as objects, are collections of properties and 
-    methods that can hold multiple values or more complex data structures. JavaScript is dynamically 
-    typed, meaning  that the data type of a variable is determined at runtime and can change as 
-    the program executes, providing flexibility but also necessitating careful management of 
-     types to prevent errors. Primitive data types include booleans and strings. The seven primitive 
-    data types are listed below. </P>
-    <h2>Primitive data types: </h2>
-            <ul>
-                <li id="string"><h2><button>String</button></h2>
-                    <p>A string is a sequence of characters. In Javascript code,
-                     strings are always wrapped in "". For example- " This sentence is a string!"
-                    </p>
-                </li>
-                <li id="number"><h2><button>Number</button></h2>
-                <div>A number can be an integer like 42 or a decimal like 3.14.</div>
-            </li>
-                <li id="boolean"><h2><button>Boolean</button></h2></li>
-                <div>A boolean is either true or false.</div>
-            </li>
-                <li id="bigint"><h2><button>Bigint</button></h2></li>
-                <p>A bigint represents very large numbers, like 9007199254740991n</p>
-            </li>
-                <li id="symbol"><h2><button>Symbol</button></h2></li>
-                <p>A symbol is a unique and immutable identifier: Symbol('example')</p>
-            </li>
-                <li id="null"><h2><button>Null</button></h2></li>
-                <p>Null represents the intentional absence of any object value.</p>
-            </li>
-                <li id="undefined"><h2><button>Undefined</button></h2></li>
-                <p>Undefined means a variable has been declared but not assigned a value.</p>
-            </li>
-            </ul>
-             </p>
-            <section>
-                <h2>JavaScript Functions</h2>
-                <p>Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.</p>
-                <pre>
-                    <code>
-                        function greet(name) {
-                            return 'Hello, ' + name + '!';
-                        }
-                        console.log(greet('World')); // Output: Hello, World!
-                    </code>
-                </pre>
-            </section>
-            <section>
-                <h2>Event Handling</h2>
-                <p>JavaScript can be used to handle events, such as when a user clicks a button. Here's an example:</p>
-                <button id="alertBtn" class="button">Click me</button>
-                <p id="message"></p>
-                <script>
-                    document.getElementById('alertBtn').addEventListener('click', function() {
-                        document.getElementById('message').textContent = 'Button was clicked!';
-                    });
-                </script>
-            </section>
-        </main>
+            <main class="col-md-9">
+                <h1 class="bg-danger text-white text-center py-4">JavaScript Basics</h1>
+                <p>This section explains the basic concepts of JavaScript.</p>
+                <p>JavaScript has 7 basic data types:</p>
+                <ul class="list-group">
+                    <li class="list-group-item" id="string">
+                        <h2><button class="btn btn-primary btn-sm">String</button></h2>
+                        <p>A string is a sequence of characters, like this sentence.</p>
+                    </li>
+                    <li class="list-group-item" id="number">
+                        <h2><button class="btn btn-primary btn-sm">Number</button></h2>
+                        <p>A number can be an integer like 42 or a decimal like 3.14.</p>
+                    </li>
+                    <li class="list-group-item" id="boolean">
+                        <h2><button class="btn btn-primary btn-sm">Boolean</button></h2>
+                        <p>A boolean is either true or false.</p>
+                    </li>
+                    <li class="list-group-item" id="bigint">
+                        <h2><button class="btn btn-primary btn-sm">BigInt</button></h2>
+                        <p>A bigint represents very large numbers, like 9007199254740991n</p>
+                    </li>
+                    <li class="list-group-item" id="symbol">
+                        <h2><button class="btn btn-primary btn-sm">Symbol</button></h2>
+                        <p>A symbol is a unique and immutable identifier: Symbol('example')</p>
+                    </li>
+                    <li class="list-group-item" id="null">
+                        <h2><button class="btn btn-primary btn-sm">Null</button></h2>
+                        <p>Null represents the intentional absence of any object value.</p>
+                    </li>
+                    <li class="list-group-item" id="undefined">
+                        <h2><button class="btn btn-primary btn-sm">Undefined</button></h2>
+                        <p>Undefined means a variable has been declared but not assigned a value.</p>
+                    </li>
+                </ul>
+
+                <section class="my-5">
+                    <h2>JavaScript Functions</h2>
+                    <p>Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.</p>
+                    <pre class="bg-dark text-white p-3">
+                        <code>
+                            function greet(name) {
+                                return 'Hello, ' + name + '!';
+                            }
+                            console.log(greet('World')); // Output: Hello, World!
+                        </code>
+                    </pre>
+                </section>
+
+                <section class="my-5">
+                    <h2>Event Handling</h2>
+                    <p>JavaScript can be used to handle events, such as when a user clicks a button. Here's an example:</p>
+                    <button id="alertBtn" class="btn btn-primary">Click me</button>
+                    <p id="message" class="mt-2"></p>
+                    <script>
+                        document.getElementById('alertBtn').addEventListener('click', function() {
+                            document.getElementById('message').textContent = 'Button was clicked!';
+                        });
+                    </script>
+                </section>
+            </main>
+        </div>
     </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./assets/script.js"></script>
-   
 </body>
 </html>

@@ -1,212 +1,126 @@
-/* General body styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
-    color: #333;
-}
-
-/* Smooth scroll effect */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Container for sidebar and content */
-.container {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 20px;
-    min-height: 100vh;
-    width: 100%;
-    background-color: #fff;
-}
-
-/* Sidebar Styling */
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 50px;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    color: #3498db;
-    transform: scale(1.1);
-}
-
-.sidebar ul li a.active {
-    color: #e74c3c;
-    text-decoration: underline;
-}
-
-/* Main content area */
-.content {
-    flex-grow: 1;
-    padding: 50px 80px;
-    color: #2c3e50;
-    max-width: 1100px;
-    margin: 0 auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Headings */
-h1, h2 {
-    font-family: 'Arial', sans-serif;
-    color: #34495e;
-}
-
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-/* Paragraph styling */
-p {
-    line-height: 1.6;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-
-/* CSS Example Block */
-.css-example {
-    background-color: #ecf0f1;
-    padding: 15px;
-    border: 1px solid #bdc3c7;
-    margin-bottom: 20px;
-}
-
-.css-example p {
-    margin: 0;
-    font-style: italic;
-}
-
 .css-example p:hover {
-    color: red;
-    background-color: green;
-    padding: 5px;
-    border-radius: 3px;
+    color: green; /* Change text color to blue (Bootstrap primary color) */
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  }
+
+.css-example  p{
+  color: white;
 }
 
-/* Interactive elements */
+.sidebar {
+  background-image: url('./images/aside.png'); /* Ensure correct path */
+  background-size: cover; /* Fill the sidebar with the image */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Don't repeat the image */
+  color: white; /* White text color for better contrast */
+  padding: 20px; /* Add some padding */
+  min-height: 100vh; /* Ensure it stretches to full viewport height */
+}
+  
+
+
+.sidebar {
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+.sidebar a {
+    font-size: 1.5rem;
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    color: #ebeff4; /* Blue color for the sidebar links */
+}
+
+
+.sidebar a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+
+  /* Style for each content block */
+.content-block {
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Different background colors for each section */
+#html {
+  background-color: #5d94cb; /* Light gray for HTML section */
+}
+
+#css {
+  background-color: #9ec225; /* Lighter gray for CSS section */
+}
+
+#javascript {
+  background-color: #e1637a; /* Even lighter gray for JS section */
+}
+
+#form {
+  background-color: #d1ecf1; /* Light blue for Form section */
+}
+
+/* Optional: Add some spacing and rounded corners to make it look more modern */
+h1, h2 {
+  font-weight: bold;
+  color: #343a40;
+}
+
+
+
+/* Style the button */
+.btn {
+  border-radius: 5px; /* Slightly rounded button */
+}
+
+/* Dynamic content styling */
+#dynamic-content {
+  margin-top: 20px;
+}
+
+
+
+/* Base styles for light mode */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Button style */
 button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
+/* Hover effect on the button */
 button:hover {
-    background-color: #2980b9;
-    transform: scale(1.1);
+  background-color: #0056b3;
 }
 
-button:focus {
-    outline: 3px solid #f39c12;
-}
-
-/* Code block styling */
-pre {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    overflow-x: auto;
-    max-width: 100%;
-}
-
-code {
-    font-family: 'Courier New', monospace;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 1200px) {
-    .content {
-        padding: 30px 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
-
-    .sidebar ul li {
-        margin-bottom: 20px;
-    }
-}
+/* Dark mode styles */
 body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0; /* Lighter text color for better contrast */
+  background-color: #333;
+  color: #fff;
 }
 
+/* Optional: Dark mode button style */
 body.dark-mode button {
-    background-color: #555;
-    color: white;
+  background-color: #444;
 }
 
-body.dark-mode .sidebar {
-    background-color: #333;
-}
-
-body.dark-mode .content {
-    background-color: #222;
-    color: #e0e0e0; /* Ensure text in content section is readable */
-}
-
-body.dark-mode a {
-    color: #4CAF50; /* Use a light green color for links in dark mode */
-}
-
-body.dark-mode a:hover {
-    color: #81C784; /* Lighter green on hover */
-}
-
-body.dark-mode h1, body.dark-mode h2 {
-    color: #ffffff; /* White headings for better readability */
-}
-
-body.dark-mode p, body.dark-mode li {
-    color: #e0e0e0; /* Ensure paragraphs and list items are visible */
+body.dark-mode button:hover {
+  background-color: #666;
 }

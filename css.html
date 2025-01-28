@@ -3,106 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/basicCSS.css">
+
     <title>CSS Basics</title>
 
-    
-<style>
-
-    body{
-        font-family: Arial, Helvetica, sans-serif;  
-        background-color: lightgrey;
-        margin: 0;
-        padding: 0;
-    
-    }
-    
-    h1{
-        text-align: center;
-        margin-top: 50px;
-        color: #2c3e50;
-    }
-    
-    p{
-        
-        margin: 20px;
-        font-size: 18px;
-        line-height: 1.5;
-    }
-    
-    .button{
-        display: -webkit-box;
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-       border-radius: 5px;
-        margin:20px;
-        padding: 10px 20px;
-    }
-    .button:hover{
-        background-color:orchid
-    }
-    
-   
-
-    a:hover{
-        color: #2c3e50;
-    }
-    @media screen and (max-width: 600px){
-        .container{
-            display: flex;
-        }
-        .sidebar{
-            width: 30%;
-            background-color: lightblue;
-            padding: 20px;
-        }
-        .content{
-            width: 45%;
-            padding: 10px;
-        }
-        
-    
-    }
-
-    .flex-container {
-        display: flex;
-        justify-content: space-around;
-        background-color: lightblue;
-    }
-    .flex-item {
-        background-color: #2c3e50;
-        color: white;
-        padding: 20px;
-        margin: 10px;
-        text-align: center;
-    }
 
     </style>
 </head>
-<body>
+<body class="bg-light">
 
-    <header>
-        <h1>Welcome To CSS Basics</h1>
-    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar Section -->
+            <aside class=" sidebar col-md-3 p-4" style="font-size: 4.5rem;">
+                <ul class = "list-unstyled">
+                  <li><a href="index.html" class="btn btn-link">Home</a></li>
+                  <li><a href="basics.html" class="btn btn-link">HTML Basics</a></li>
+                  <li><a href="css.html" class="btn btn-link">CSS Basics</a></li>
+                  <li><a href="script.html" class="btn btn-link">JavaScript Basics</a></li>
+                </ul>
+              </aside>
+   
 
+            <!-- Main Content Section -->
+            <main class="col-md-9">
+                <h1 class="bg-success text-white text-center py-4">CSS Basics</h1>
+                <section id="css" class="mb-4">
+                    <h2>What is CSS?</h2>
+                    <p>CSS stands for Cascading Style Sheet and is used to style the HTML elements of a web page. It defines the layout, colors, fonts, and more.</p>
+                </section>
 
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">HTML Basics</a></li>
-                <li><a href="css.html">CSS Basics</a></li>
-                <li><a href="script.html">JavaScript Basics</a></li>
-            </ul>
-        </aside>
-
-        <main class="content">
-            <section id="css">
-                <h2>What is CSS?</h2>
-               <p>CSS stands for Cascading Style Sheet is used to style the HTML elements of a web page. It defines the layout, colors, fonts, and more.</p>
-            </section>
-                <section>
+                <section class="mb-4">
                     <h2>How to use CSS?</h2>
                     <p>There are three ways to use CSS in your HTML document:</p>
                     <ul>
@@ -111,39 +44,46 @@
                         <li>External CSS: This is when you use an external CSS file to style your HTML document.</li>
                     </ul>
                 </section>
-            <section>
-            <h2>Basic styling Example</h2>
-            <p>This is a paragraph with basic styling. The font size, line height, and margin have been adjusted for readability.</p>
-            <a href="https://www.w3schools.com/css/" target="_blank" class="button">Learn CSS</a>
-            </section>
-            <section>
-                <h2>CSS Flexbox</h2>
-                <p>CSS Flexbox is a layout module that makes it easier to design flexible and responsive layout structures without using float or positioning.</p>
-                <div class="flex-container">
-                    <div class="flex-item">1</div>
-                    <div class="flex-item">2</div>
-                    <div class="flex-item">3</div>
-                </div>
-                <pre>
-                    <code>
-                        .flex-container {
-                            display: flex;
-                            justify-content: space-around;
-                            background-color: lightblue;
-                        }
-                        .flex-item {
-                            background-color: #2c3e50;
-                            color: white;
-                            padding: 20px;
-                            margin: 10px;
-                            text-align: center;
-                        }
-                    </code>
-                </pre>
-            </section>
-            <!-- You can add more content related to CSS Basics here -->
-        </main>
+
+                <section class="mb-4">
+                    <h2>Basic Styling Example</h2>
+                    <p>This is a paragraph with basic styling. The font size, line height, and margin have been adjusted for readability.</p>
+                    <a href="https://www.w3schools.com/css/" target="_blank" class="btn btn-primary">Learn CSS</a>
+                </section>
+
+                <section class="mb-4">
+                    <h2>CSS Flexbox</h2>
+                    <p>CSS Flexbox is a layout module that makes it easier to design flexible and responsive layout structures without using float or positioning.</p>
+                    <div class="d-flex justify-content-around bg-light p-4 mb-4">
+                        <div class="p-3 bg-dark text-white">1</div>
+                        <div class="p-3 bg-dark text-white">2</div>
+                        <div class="p-3 bg-dark text-white">3</div>
+                    </div>
+                    <pre class="bg-dark text-white p-3">
+                        <code>
+                            .flex-container {
+                                display: flex;
+                                justify-content: space-around;
+                                background-color: lightblue;
+                            }
+                            .flex-item {
+                                background-color: #2c3e50;
+                                color: white;
+                                padding: 20px;
+                                margin: 10px;
+                                text-align: center;
+                            }
+                        </code>
+                    </pre>
+                </section>
+            </main>
+        </div>
     </div>
-  
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

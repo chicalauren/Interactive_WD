@@ -1,0 +1,58 @@
+/* Custom styling for the sidebar */
+
+
+.sidebar {
+    background-image: url('./images/basics.png'); /* Ensure correct path */
+    background-size: cover; /* Fill the sidebar with the image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    color: white; /* White text color for better contrast */
+    padding: 20px; /* Add some padding */
+    min-height: 100vh; /* Ensure it stretches to full viewport height */
+  }
+  
+
+
+.sidebar {
+    background-color: #f8f9fa;
+    height: 100vh;
+    padding-top: 20px;
+}
+.sidebar a {
+    font-size: 1.5rem;
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    color: #ebeff4; /* Blue color for the sidebar links */
+}
+
+
+.sidebar a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Custom styling for input fields */
+.input-field {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.input-section {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.input-section h2 {
+    margin-bottom: 15px;
+}
+
+.input-section button {
+    width: 100%;
+}
+
+/* Dynamic content styling */
+#dynamic-content {
+    margin-top: 20px;
+}

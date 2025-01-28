@@ -68,6 +68,9 @@ const paragraphColor = document.getElementById('paragraphColor').value;
       document.getElementById('paragraphInput').value = '';
   }
 }
+
+
+
 // Get the theme toggle button
 const modeToggle = document.getElementById('mode-toggle');
 

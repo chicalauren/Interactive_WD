@@ -4,76 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Basics</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/basics.css">
     <style>
     
     </style>
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">HTML Basics</a></li>
-                <li><a href="css.html">CSS Basics</a></li>
-                <li><a href="script.html">JavaScript Basics</a></li>
-            </ul>
-        </aside>
-        <main class="content">
-            <h1>HTML Basics</h1>
-            
-            <section>
-                <h2>What is HTML?</h2>
-                <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using various elements and tags.</p>
-            </section>
-
-            <section>
-                <h2>Basic HTML Structure</h2>
-                <p>Every HTML document should contain these basic elements:</p>
-                <ul>
-                    <li><strong>&lt;!DOCTYPE html&gt;</strong> - Declares the document type</li>
-                    <li><strong>&lt;html&gt;</strong> - The root element</li>
-                    <li><strong>&lt;head&gt;</strong> - Contains meta information</li>
-                    <li><strong>&lt;body&gt;</strong> - Contains the visible content</li>
+    <div class="container-fluid">
+        <div class="row">  
+        
+            <aside class="sidebar col-md-3 p-4">
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="btn btn-link">Home</a></li>
+                    <li><a href="basics.html" class="btn btn-link">HTML Basics</a></li>
+                    <li><a href="css.html" class="btn btn-link">CSS Basics</a></li>
+                    <li><a href="script.html" class="btn btn-link">JavaScript Basics</a></li>
                 </ul>
-            </section>
+            </aside> 
 
-            <section>
-                <h2>Common HTML Elements</h2>
-                <ul>
-                    <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> - Headings</li>
-                    <li><strong>&lt;p&gt;</strong> - Paragraphs</li>
-                    <li><strong>&lt;div&gt;</strong> - Divisions or sections</li>
-                    <li><strong>&lt;a&gt;</strong> - Links</li>
-                    <li><strong>&lt;img&gt;</strong> - Images</li>
-                </ul>
-            </section>
+            <main class="col-md-9 p-4">
+                <h1 class="bg-info text-white text-center py-4">HTML Basics</h1>
+                
+                <section class="mt-4">
+                    <h2>What is HTML?</h2>
+                    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using various elements and tags.</p>
+                </section>
 
-            <section class="input-section">
-                <h2>See it yourself!</h2>
-                <p> As mentioned on the main page, HTML provides structure to our pages. In the text fields below, a javascript
-                    function will display inputted text as a heading <code>&lt;h1&gt;&lt;/h1&gt;</code> and paragraph 
-                    <code>&lt;p&gt;&lt;/p&gt;</code> element:</p>
+                <section class="mt-4">
+                    <h2>Basic HTML Structure</h2>
+                    <p>Every HTML document should contain these basic elements:</p>
+                    <ul>
+                        <li><strong>&lt;!DOCTYPE html&gt;</strong> - Declares the document type</li>
+                        <li><strong>&lt;html&gt;</strong> - The root element</li>
+                        <li><strong>&lt;head&gt;</strong> - Contains meta information</li>
+                        <li><strong>&lt;body&gt;</strong> - Contains the visible content</li>
+                    </ul>
+                </section>
+
+                <section class="mt-4">
+                    <h2>Common HTML Elements</h2>
+                    <ul>
+                        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> - Headings</li>
+                        <li><strong>&lt;p&gt;</strong> - Paragraphs</li>
+                        <li><strong>&lt;div&gt;</strong> - Divisions or sections</li>
+                        <li><strong>&lt;a&gt;</strong> - Links</li>
+                        <li><strong>&lt;img&gt;</strong> - Images</li>
+                    </ul>
+                </section>
+
+                <section class="input-section">
+                    <h2>Try It Yourself!</h2>
+                    <p>Add your own heading and paragraph to the page:</p>
                 
-                <label for="headingInput">Heading Text:</label>
-                <input type="text" id="headingInput" class="input-field" placeholder="Enter the text for your heading">
+                    <!-- Heading and color input side by side -->
+                    <div class="d-flex mb-3">
+                        <label for="headingInput">Heading Text:</label>
+                        <input type="text" id="headingInput" class="input-field form-control" placeholder="Enter heading text">
+                        <label for="headingColor">Heading Color:</label>
+                        <input type="color" id="headingColor" class="input-field form-control ms-2" title="Choose heading color" style="width: 200px; height: 40px;">
+                    </div>
                 
-                <label for="paragraphInput">Paragraph Text:</label>
-                <input type="text" id="paragraphInput" class="input-field" placeholder="Enter the text for your paragraph">
+                    <!-- Paragraph and color input side by side -->
+                    <div class="d-flex mb-3">
+                        <label for="paragraphInput">Paragraph Text:</label>
+                        <input type="text" id="paragraphInput" class="input-field form-control" placeholder="Enter paragraph text">
+                        <label for="paragraphColor">Paragraph Color:</label>
+                        <input type="color" id="paragraphColor" class="input-field form-control ms-2" title="Choose paragraph color" style="width: 200px; height: 40px;">
+                    </div>
+                    
+                    <button onclick="addContent()" class="btn btn-primary mt-3">Add Content</button>
+                    
+                    <div id="dynamic-content" class="mt-4"></div>
                 
-                <label for="headingColor">Heading Color:</label>
-                <input type="color" id="headingColor" class="input-field" title="Choose heading color">
-                
-                <label for="paragraphColor">Paragraph Color:</label>
-                <input type="color" id="paragraphColor" class="input-field" title="Choose paragraph color">
-                
-                <button onclick="addContent()" class="btn">Add Content</button>
-                
-                <div id="dynamic-content"></div>
-            </section>
-    
-        </main>
+                </section>
+        
+            </main>
+        </div>    
     </div>
+
+
+    <script>
+        function addContent() {
+            var headingText = document.getElementById('headingInput').value;
+            var paragraphText = document.getElementById('paragraphInput').value;
+            var headingColor = document.getElementById('headingColor').value;
+            var paragraphColor = document.getElementById('paragraphColor').value;
+
+            var newContent = '<h3 style="color:' + headingColor + ';">' + headingText + '</h3>';
+            newContent += '<p style="color:' + paragraphColor + ';">' + paragraphText + '</p>';
+
+            document.getElementById('dynamic-content').innerHTML = newContent;
+        }
+    </script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="./assets/script.js"></script>
    
